@@ -3,8 +3,8 @@ Procedure:
 -store endpoints{
     lines = input from file
     newLines = lines' escape characters replaced by commas
-    TODO separate and store pairs by commas
-    TODO treat each member of the pair as an individual
+    separate and store pairs by commas
+    treat each member of the pair as an individual
 }
 -compare endpoints a,b/c,d
 -if a<c&&b>d -> means pair c,d is completely engulfed within pair a,b
