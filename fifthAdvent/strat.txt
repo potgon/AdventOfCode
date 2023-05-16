@@ -2,6 +2,9 @@ Objective: rearrange arrays and read last index of each one
 Procedure:
 - make an array with each column (9 array seems excessive, maybe nested arrays?)
     -fill subarrays with for loop with nested switch
-    -start reading from eighth line, on its index, upwards (let i = 0; i <=9; i--) (start reading at [1] and iterate +4)
-    -tryParse (whitespace exception handling)
+    -start reading from eighth line, on its index, upwards (let i = 0; i <=7; i--) (start reading at [1] and iterate +4)
+    -whitespace handling
 - make function that reads movements
+    -map array splitting by " "
+    -splice to remove "move", "from" and "to"
+- make a function that pops and pushes values

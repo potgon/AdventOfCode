@@ -5,9 +5,8 @@ fs.readFile("adventArray.txt", "utf8", (err, arrayInput) => {
     fs.readFile("adventMoves.txt", "utf8", (err, moveInput) => {
         if (err) throw err
         const moveData = moveReader(moveInput.split("\n"))
-        for(let i = 0; i < moveData.length; i++) {
-
-        }
+        moveMaker(arrayData, moveData)
+        popper(arrayData)
     })
 })
 
@@ -26,15 +25,29 @@ function arrayMaker(input) {
 }
 
 function moveReader(input) {
-    const mappedInput = input.map((line) => {  return line.split(" ") })
+    const mappedInput = input.map((line) => {
+        return line.split(" ")
+    })
     return mappedInput.map((line) => {
         line.splice(0, 1)
         line.splice(1, 1)
         line.splice(2, 1)
+        return line
     })
 }
 
 
-function moveMaker(input) {
-
+function moveMaker(arrayData, moveData) {
+    for (let i = 0; i < moveData.length; i++) {
+        const count = parseInt(moveData[i][0])
+        const fromStack = parseInt(moveData[i][1]) - 1
+        const toStack = parseInt(moveData[i][2]) - 1
+        for (let k = 0; k < count; k++) {
+            const elem = arrayData[fromStack].pop()
+            arrayData[toStack].push(elem)
+        }
+    }
+}
+function popper(arrayData) {
+    console.log(arrayData.map(item => item.pop()))
 }
