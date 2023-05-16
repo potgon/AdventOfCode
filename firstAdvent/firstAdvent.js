@@ -1,5 +1,5 @@
 const fs = require('fs');
-fs.readFile('advent.txt', 'utf8', (err, data) => {
+fs.readFile('adventArray.txt', 'utf8', (err, data) => {
     if (err) throw err;
     let localArr = [];
     let i = 0;
