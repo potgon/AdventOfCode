@@ -1,10 +1,9 @@
 Objective: look for a pair that is contained within another
 Procedure:
--store endpoints{
+-store endpoints
     lines = input from file
-    newLines = lines' escape characters replaced by commas
-    separate and store pairs by commas
+    lines = lines escape characters replaced by commas
+    split and store pairs by anonymous map() calling
     treat each member of the pair as an individual
-}
 -compare endpoints a,b/c,d
 -if a<c&&b>d -> means pair c,d is completely engulfed within pair a,b

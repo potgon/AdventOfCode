@@ -1,0 +1,6 @@
+Objective: sum lines separated by blank lines
+Procedure:
+-read whole document
+-split by \n
+-iterate with for-loop. Keep reading and += to local var until \n is met
+-if(\n) array.push(local var), local var = 0

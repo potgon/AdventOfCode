@@ -1,0 +1,6 @@
+Objective: sum results of given cases
+Procedure:
+-read whole file, split by \n
+-iterate with for loop, line[0] = enemyMove, line[2] = myMove (line[1] = whitespace)
+-compare all cases with nested switch statement (maybe not very efficient but w/e)
+-score += inner switch value

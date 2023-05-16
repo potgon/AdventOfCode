@@ -1,0 +1,10 @@
+Objective: find common char in a line split by half, return its custom priority
+Procedure:
+-read whole file, split by \n
+-make a function that returns char priority based on ASCII
+    -if ASCII > 90 = lower, else = upper
+    -return calculated priority (char ASCII - 96 || 38)
+-iterate through all lines, split them by half = localVar1,localVar2
+-send localVars to findMatch function
+-make findMatch function, should receive 2 params, iterates through them with nested for
+    -if localVar1[i] === localVar2[j], return charPriority(localVar1[i])
