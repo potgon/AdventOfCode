@@ -10,9 +10,9 @@ fs.readFile("advent.txt", "utf8", (err, data) => {
         let pair2Start = +pairs[1].split("-")[0];
         let pair2End = +pairs[1].split("-")[1];
         if (pair1Start < pair2Start && pair1End < pair2Start){
-            console.log("No overlap");
+            //No overlap
         } else if (pair2Start < pair1Start && pair2End < pair1Start){
-            console.log("No overlap");
+            //No overlap
         } else {
             totalPairs++;
         }
