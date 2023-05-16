@@ -5,7 +5,9 @@ fs.readFile("adventArray.txt", "utf8", (err, arrayInput) => {
     fs.readFile("adventMoves.txt", "utf8", (err, moveInput) => {
         if (err) throw err
         const moveData = moveReader(moveInput.split("\n"))
-        console.log(moveData)
+        for(let i = 0; i < moveData.length; i++) {
+
+        }
     })
 })
 
