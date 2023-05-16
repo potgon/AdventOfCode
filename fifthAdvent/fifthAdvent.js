@@ -26,7 +26,9 @@ function arrayMaker(input) {
 function moveReader(input) {
     const mappedInput = input.map((line) => {  return line.split(" ") })
     return mappedInput.map((line) => {
-        return line.splice(0,4)
+        line.splice(0, 1)
+        line.splice(1, 1)
+        line.splice(2, 1)
     })
 }
 
