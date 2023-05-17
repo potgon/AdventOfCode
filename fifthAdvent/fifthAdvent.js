@@ -42,12 +42,18 @@ function moveMaker(arrayData, moveData) {
         const count = parseInt(moveData[i][0])
         const fromStack = parseInt(moveData[i][1]) - 1
         const toStack = parseInt(moveData[i][2]) - 1
+        const localStack = [];
         for (let k = 0; k < count; k++) {
-            const elem = arrayData[fromStack].pop()
-            arrayData[toStack].push(elem)
+            localStack.push(arrayData[fromStack].pop())
+        }
+        localStack.reverse()
+        for (let j = 0; j < localStack.length; j++) {
+            arrayData[toStack].push(localStack[j])
         }
     }
+
 }
+
 function popper(arrayData) {
     console.log(arrayData.map(item => item.pop()))
 }
